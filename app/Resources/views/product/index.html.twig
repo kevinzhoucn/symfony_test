@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <p>This is Product index Page!</p>
+  <a href="{{ path('product_create') }}">New Product</a>
+  {% for product in products %}
+    {{ include('product/product_details.html.twig', {'product' : product}) }}
+  {% endfor %}
+{% endblock %}
+

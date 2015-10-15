@@ -1,0 +1,51 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+front:
+  path: /front
+  defaults: { _controller: 'AppBundle:Front:index' }
+
+front_create:
+  path: /front/create
+  defaults: { _controller: 'AppBundle:Front:create'}
+
+front_show:
+  path: /front/show/{id}
+  defaults: {_controller: 'AppBundle:Front:show'}
+
+front_products:
+  path: /front/products
+  defaults: {_controller: 'AppBundle:Front:products'}
+
+products:
+  path: /products
+  defaults: { _controller: 'AppBundle:Product:index' }
+
+product_create:
+  path: /products/new
+  defaults: { _controller: 'AppBundle:Product:create'}
+
+product_show:
+  path: /products/{id}
+  defaults: {_controller: 'AppBundle:Product:show'}
+
+product_sale:
+  path: /products/sale/{id}
+  defaults: {_controller: 'AppBundle:Product:sale'}  
+
+design_factory_index:
+  path: /dp/factory
+  defaults: {_controller: 'AppBundle\Controller\Design\FactoryController::indexAction'}    
+
+design_composite_index:
+  path: /dp/composite 
+  defaults: {_controller: 'AppBundle\Controller\Design\CompositeController::indexAction'}
+
+design_decorate_index:
+  path: /dp/decorate
+  defaults: {_controller: 'AppBundle\Controller\Design\DecorateController::indexAction'}
+
+design_home_index:
+  path: /ddp/{name}
+  defaults: {_controller: 'AppBundle\Controller\Design\HomeController::indexAction'}
